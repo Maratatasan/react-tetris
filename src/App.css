@@ -1,20 +1,98 @@
-.row {
-  background-color: lightgray;
-  margin: 0;
-}
-.cell {
-  display: inline-block;
-  margin: 1px;
-  margin-bottom: 0;
-  margin-top: 0;
-  width: 30px;
-  height: 30px;
+:root{
+  --thin-border: solid 0.5px gainsboro;
 }
 
-.cell-0 {
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+.t-board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 80vh;
+}
+.t-board:focus {
+  outline: gainsboro;
+}
+
+.t-heading{
+  width: 100%;
+  border-bottom: var(--thin-border);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.t-instructions {
+  width :100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: var(--thin-border);
+  padding-bottom: 0.5rem;
+}
+
+
+.t-navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: solid 0.2px gainsboro; 
+  margin: 5px;
+  padding: 8px;
+  border-radius: 5px;
+}
+.t-navigation img {
+  align-self: center;
+  height: 35px;
+  max-width: auto;
+}
+
+
+.t-score-container {
+  width: 331px;
+  border-bottom: solid 0.5px gainsboro;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  color:rgb(128, 128, 128);
+  margin-bottom: .5rem;
+}
+
+.t-board-display {
+  margin: 0;
+  padding: 10px;
+  background-color: rgba(128, 128, 128, 0.041);
+  display: flex;
+  flex-direction: column;
+  -webkit-box-shadow: 11px 15px 23px -15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 11px 15px 23px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: 11px 15px 23px -15px rgba(0, 0, 0, 0.75);
+  border: solid 0.5px rgb(164, 164, 164);
+}
+
+.t-row {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+.t-cell {
+  display: inline-block;
+
+  width: 30px;
+  height: 30px;
+  border: solid 0.2px gainsboro;
+}
+
+.t-cell-0 {
   background-color: white;
 }
 
-.cell-1 {
+.t-cell-1 {
   background-color: black;
 }
