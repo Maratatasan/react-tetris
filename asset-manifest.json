@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.1119a001.css",
-    "main.js": "/static/js/main.db845f1c.js",
-    "static/media/refresh.png": "/static/media/refresh.68dedfed7d38c1f5dff2.png",
-    "static/media/bt-lower.png": "/static/media/bt-lower.62521216e707dc82e191.png",
-    "index.html": "/index.html",
-    "main.1119a001.css.map": "/static/css/main.1119a001.css.map",
-    "main.db845f1c.js.map": "/static/js/main.db845f1c.js.map"
+    "main.css": "/react-tetris/static/css/main.49c5a7fa.css",
+    "main.js": "/react-tetris/static/js/main.c16642bc.js",
+    "static/media/refresh.png": "/react-tetris/static/media/refresh.68dedfed7d38c1f5dff2.png",
+    "static/media/bt-lower.png": "/react-tetris/static/media/bt-lower.62521216e707dc82e191.png",
+    "index.html": "/react-tetris/index.html",
+    "main.49c5a7fa.css.map": "/react-tetris/static/css/main.49c5a7fa.css.map",
+    "main.c16642bc.js.map": "/react-tetris/static/js/main.c16642bc.js.map"
   },
   "entrypoints": [
-    "static/css/main.1119a001.css",
-    "static/js/main.db845f1c.js"
+    "static/css/main.49c5a7fa.css",
+    "static/js/main.c16642bc.js"
   ]
 }
