@@ -1,12 +1,16 @@
-import React, { memo, useEffect, useRef } from "react";
-import { useBoard, tRow } from "./useBoard";
+import React, { memo, useEffect, useRef,useState } from "react";
+import { useBoard, tRow, tScene } from "./useBoard";
 import { btLower, btUp , refresh} from "../assets";
 const Board = (): JSX.Element => {
-  const [display, onControlShape, score] = useBoard();
+  const [boardDisplay, setBoardDisplay] = useState<tScene>()
+  let [display, onControlShape, score, resetTetris] = useBoard();
   const eBoard = useRef<HTMLDivElement>(null);
 
+
+  
   useEffect(focusBoard, []);
-  useEffect(() => {}, [display]);
+
+
 
   function focusBoard() {
     if (eBoard.current) {
@@ -35,9 +39,8 @@ const Board = (): JSX.Element => {
             <img src={btLower} alt="navigation keys" />
             <div>Move</div>
           </div>
-          <div className="t-navigation">
-
-            <img src={refresh} alt="navigation keys" />
+          <div className="t-navigation" onClick={resetTetris}>
+            <img src={refresh} alt="reset bt" />
             <div>To restart</div>
           </div>
     

@@ -65,7 +65,8 @@ function createEmptyScene() {
 export function useBoard(): [
   display: tScene,
   onControlShape: KeyboardEventHandler,
-  score: number
+  score: number,
+  resetTetris: () => void
 ] {
   const [scene, setScene] = useState(() => createEmptyScene());
   const [shape, setShape] = useState(() => randomShape());
@@ -123,8 +124,17 @@ export function useBoard(): [
     }
   };
 
-  function rotateShape() {
+  const resetTetris = () => {
+    setScene(createEmptyScene());
+    setShape(randomShape());
+    setPosition(START_POSITION);
+    setDisplay(scene);
+    setScore(0);
+    shapeRotation.current = -1;
+  };
+  return [display, onControlShape, score, resetTetris];
 
+  function rotateShape() {
     const tX = Math.floor(shape.width / 2);
     const tY = Math.floor(shape.height / 2);
 
@@ -163,9 +173,6 @@ export function useBoard(): [
       setShape(rotatedShape);
     }
   }
-
-  return [display, onControlShape, score];
-
   function movePosition(x: number, y: number): boolean {
     const updatedPosition = { x: position.x + x, y: position.y + y };
     if (!isValidPosition(updatedPosition, shape)) {

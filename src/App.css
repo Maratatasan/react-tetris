@@ -1,4 +1,4 @@
-:root{
+:root {
   --thin-border: solid 0.5px gainsboro;
 }
 
@@ -18,41 +18,60 @@
   height: 80vh;
 }
 .t-board:focus {
-  outline: gainsboro;
+  outline: rgb(218, 214, 214);
 }
 
-.t-heading{
+.t-heading {
   width: 100%;
   border-bottom: var(--thin-border);
   padding: 0.5rem;
   margin-bottom: 0.5rem;
 }
+
 .t-instructions {
-  width :100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   border-bottom: var(--thin-border);
   padding-bottom: 0.5rem;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
-
 
 .t-navigation {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: solid 0.2px gainsboro; 
+  border: var(--thin-border);
   margin: 5px;
   padding: 8px;
   border-radius: 5px;
 }
+.t-navigation:last-child:hover {
+  cursor: pointer;
+  border: solid 1px grey;
+  transform: scale(1.1);
+}
+
+.t-navigation:last-child:active {
+  cursor: pointer;
+  border: solid 1px black;
+  transform: scale(1.05);
+}
+.t-navigation:last-child:active img {
+  transform: scale(0.97);
+}
+
 .t-navigation img {
   align-self: center;
   height: 35px;
   max-width: auto;
+  user-select: none;
+  pointer-events: none;
 }
-
 
 .t-score-container {
   width: 331px;
@@ -60,8 +79,8 @@
   display: flex;
   justify-content: center;
   background-color: white;
-  color:rgb(128, 128, 128);
-  margin-bottom: .5rem;
+  color: rgb(128, 128, 128);
+  margin-bottom: 0.5rem;
 }
 
 .t-board-display {
